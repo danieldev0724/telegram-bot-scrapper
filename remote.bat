@@ -9,6 +9,9 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
+pause
+cls
+
 REM push request
 echo Git push..
 git push
