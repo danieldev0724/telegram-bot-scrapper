@@ -45,3 +45,10 @@ COMMANDS = {
 }
 
 #print(TEMPLATES.get('start'))
+
+TAGS_METADATA = [
+    {
+        "name": "webhooks",
+        "description": "webhooks endpoints"
+    }
+]
