@@ -40,7 +40,7 @@ The project consists of a Telegram bot that interacts with the user through cust
 
 - 1. Run the app
 ```bash
-    python app.py
+    python app/main.py
 ```
 
 ## Usage with Docker (optional)
