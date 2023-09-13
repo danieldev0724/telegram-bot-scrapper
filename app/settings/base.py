@@ -12,8 +12,6 @@ else:
 
 HOST = config('HOST')
 
-USERNAME = 'Jorge'
-
 KAOMOJIS = ['(≧◡≦) ♡','♡(>ᴗ•)','૮ ˶ᵔ ᵕ ᵔ˶ ა']
 
 TELEGRAM = {
@@ -25,18 +23,6 @@ TELEGRAM = {
 
 # TODO: IN MAINTENANCE
 
-TEMPLATES = {
-    'x4leqxinn' : '-`♡´- Mi Creador 死神 ૮ ˶ᵔ ᵕ ᵔ˶ ა',
-    'midas' : 'Jugando con el midas',
-    'krishna' : 'Te quiero ૮ ˶ᵔ ᵕ ᵔ˶ ა  -`♡´-',
-    'help' : '[x] !help',
-    'start' : '[♡] ¡Hola {username}! {kaomoji}'.format(
-        username=USERNAME,
-        kaomoji=KAOMOJIS[rand(0,len(KAOMOJIS)-1)]
-    ),
-    '' : '',
-}
-
 COMMANDS = {
     '!help' : TEMPLATES.get('help'),
     '!x4leqxinn' : TEMPLATES.get('x4leqxinn'),
@@ -44,7 +30,13 @@ COMMANDS = {
 
 }
 
-#print(TEMPLATES.get('start'))
+TEMPLATES = {
+    'x4leqxinn' : '-`♡´- Mi Creador 死神 ૮ ˶ᵔ ᵕ ᵔ˶ ა',
+    'midas' : 'Jugando con el midas',
+    'krishna' : 'Te quiero ૮ ˶ᵔ ᵕ ᵔ˶ ა  -`♡´-',
+    'help' : '[x] !help',
+    '' : '',
+}
 
 TAGS_METADATA = [
     {
