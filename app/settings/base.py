@@ -1,5 +1,6 @@
 from decouple import config
 from .command_templates import *
+from .openapi_metadata import *
 
 DEBUG = config('DEBUG',cast=bool,default=True)
 
@@ -20,12 +21,6 @@ TELEGRAM = {
 }
 
 
-TAGS_METADATA = [
-    {
-        "name": "webhooks",
-        "description": "webhooks endpoints"
-    }
-]
 
 # TODO: IN MAINTENANCE
 
