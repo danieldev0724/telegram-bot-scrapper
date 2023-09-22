@@ -94,9 +94,12 @@ class TelegramHandler:
             await self.current_message.reply_text('Ese comando esta ausente como tu papá:v')
 
     def _verify_message(self):
-        self.is_command = False
-        if self.current_message.entities: 
-            if str(self.current_message.entities[0].type) == 'bot_command': self.is_command = True
+        try:
+            if str(self.current_message.entities[0].type) == 'bot_command': 
+                self.is_command = True
+        except (IndexError, AttributeError):
+            self.is_command = False
+
 
 
     def _handle_chat(self):
@@ -110,7 +113,11 @@ class TelegramHandler:
     async def handle_message(self, update: Update):
         # Set current message update
         self.current_message = update.message
+        print('MESSAGE')
+        print(self.current_message)
         self.user = update.message.from_user
+        print('USUARIO')
+        print(self.user)
 
         self._verify_message()
 
